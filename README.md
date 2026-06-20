@@ -1,5 +1,7 @@
 # course-kb-skill
 
+[中文文档](./README.zh-CN.md) | English
+
 A skill plugin that turns course materials into a structured Markdown knowledge base and answers questions grounded only in vault content.
 
 Works with **Claude Code** and **OpenAI Codex CLI**.
@@ -60,18 +62,13 @@ Tell Codex: "Install the skill from github.com/Ysoseri1224/course-kb-skill"
 
 **Option B — Manual install:**
 ```bash
-# Clone into Codex skills directory
 git clone https://github.com/Ysoseri1224/course-kb-skill.git ~/.codex/skills/course-kb
-
-# Or copy just the skills you need
-cp -r skills/* ~/.codex/skills/
 ```
 
 Then restart Codex and say "帮我建知识库" or `/use build` to start.
 
 **Option C — Project-level only:**
 ```bash
-# Copy AGENTS.md to your project root for project-scoped instructions
 cp AGENTS.md /path/to/your/project/AGENTS.md
 ```
 
@@ -102,7 +99,7 @@ Both tools support natural language triggering — the description field in each
 - [kb-extract](https://github.com/XUMAX-GH/kb-extract) — deterministic extraction
 - [MinerU](https://github.com/opendatalab/MinerU) — layout-aware PDF extraction
 
-`/setup` will check tool availability and guide installation.
+`/build` will check tool availability and guide installation.
 
 ## Design Principles
 
