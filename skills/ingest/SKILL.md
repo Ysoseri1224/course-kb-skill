@@ -164,6 +164,22 @@ Before reporting completion, verify ALL of:
 
 Report: files created/updated, new concepts, new chapters, any warnings.
 
+## Step 11 — Scoped lint
+
+Run a lightweight lint on files touched in this ingest only:
+- The new/updated resource file
+- The new/updated chapter file(s)
+- The new/updated concept file(s)
+- index.md
+
+Check only:
+- `[BROKEN LINK]` — wikilinks in these files that don't resolve
+- `[STALE INDEX]` — new files missing from index
+- `[ORPHAN CONCEPT]` — new concepts not referenced by any chapter
+
+If issues found, report them inline (do NOT auto-fix). This is not a full vault lint —
+it catches only regressions introduced by this ingest.
+
 ## Pause Conditions
 
 Only pause for user input when:
