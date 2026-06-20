@@ -1,9 +1,12 @@
 ---
 name: ingest-exam
-version: 1.0.0
+version: 1.0.1
 description: |
-  Ingest a past exam, test, quiz, or assessment paper into the test database.
-  Use when: user provides an exam/test file to extract questions from.
+  Ingest exam/test papers into the question database. Use when:
+  - "这是往年考题" / "帮我整理这份试卷" / "把考试题加进去"
+  - "add exam paper" / "ingest this past exam"
+  - User provides a file that is clearly an exam, quiz, test, or assessment
+  - User mentions "考题" / "试卷" / "往年题" / "mock exam"
 allowed-tools:
   - Read
   - Write

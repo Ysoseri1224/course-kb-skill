@@ -1,9 +1,11 @@
 ---
 name: status
-version: 1.0.0
+version: 1.0.1
 description: |
-  Summarize current knowledge-base coverage and configuration. Use when: user
-  wants an overview of vault state, progress, or configuration.
+  Show knowledge base coverage summary. Use when:
+  - "知识库现在什么情况" / "覆盖了多少" / "建到哪了"
+  - "show KB status" / "how much is covered"
+  - User wants a quick overview without details
 allowed-tools:
   - Read
   - Grep

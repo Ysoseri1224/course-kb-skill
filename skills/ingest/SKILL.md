@@ -1,10 +1,15 @@
 ---
 name: ingest
-version: 1.0.0
+version: 1.0.1
 description: |
-  Ingest one course source file into the structured knowledge base. Use when:
-  user provides a PDF, PPTX, DOCX, or Markdown file to add to the vault.
-  Runs extraction, comparison, and writes resource/chapter/concept/index automatically.
+  Ingest one course source file into the existing knowledge base. Use when:
+  - "帮我加入这个新讲义" / "新来了一个PDF" / "把这个也加进知识库"
+  - "add this file to the KB" / "ingest this lecture"
+  - User provides a single new file path after the vault already exists
+  - User says "又有新材料了" or mentions receiving new course content
+  
+  This is the INCREMENTAL entry point — adds to an existing vault.
+  Runs fully automatically: extract → compare → write resource/chapter/concept → update index.
 allowed-tools:
   - Read
   - Write

@@ -1,9 +1,11 @@
 ---
 name: ingest-batch
-version: 1.0.0
+version: 1.0.1
 description: |
-  Ingest all supported files in a directory sequentially. Use when: user provides
-  a directory path containing multiple course source files to add to the vault.
+  Ingest all supported files in a directory. Internal skill called by /build.
+  Use standalone when: user has a new batch of files to add to an existing vault.
+  - "这个文件夹里的都加进去" / "batch import these files"
+  - "新学期的材料都在这里" / "把这些新讲义都加进知识库"
 allowed-tools:
   - Read
   - Write

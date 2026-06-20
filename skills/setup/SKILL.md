@@ -1,10 +1,10 @@
 ---
 name: setup
-version: 1.0.0
+version: 1.0.1
 description: |
-  Initialize course-kb configuration. Use when: user wants to set up a new course
-  knowledge base, or .kb-config.md does not exist. Checks local tool availability,
-  guides user through selection, and writes .kb-config.md.
+  Initialize course-kb configuration. Internal skill called by /build.
+  Rarely used standalone — prefer /build for the full guided experience.
+  Use standalone only when: reconfiguring tools, or .kb-config.md needs regeneration.
 allowed-tools:
   - Read
   - Write

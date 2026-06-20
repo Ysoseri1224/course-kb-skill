@@ -1,9 +1,13 @@
 ---
 name: lint
-version: 1.0.0
+version: 1.0.1
 description: |
-  Check vault health without auto-fixing. Use when: user wants to verify
-  knowledge base consistency, find broken links, orphan pages, or other issues.
+  Check vault health. Use when:
+  - "检查一下知识库" / "有没有问题" / "看看有什么坏链接"
+  - "check vault health" / "any broken links?"
+  - User suspects something is wrong with the KB
+  - After manual edits to vault files
+  Maintenance tool — reports issues without auto-fixing.
 allowed-tools:
   - Read
   - Grep

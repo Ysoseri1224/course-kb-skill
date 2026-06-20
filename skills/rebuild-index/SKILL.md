@@ -1,9 +1,11 @@
 ---
 name: rebuild-index
-version: 1.0.0
+version: 1.0.1
 description: |
-  Rebuild knowledge/index.md from current chapters and concepts. Use when:
-  index is out of sync, stale, or corrupted.
+  Rebuild index.md from current vault state. Maintenance tool — use when:
+  - "重建索引" / "索引不对了" / "index 过期了"
+  - "rebuild index" / "index is stale"
+  - /lint reports multiple [STALE INDEX] issues
 allowed-tools:
   - Read
   - Write

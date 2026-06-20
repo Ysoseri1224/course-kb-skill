@@ -1,10 +1,17 @@
 ---
 name: q
-version: 1.0.0
+version: 1.0.1
 description: |
-  Answer questions from the course knowledge base. Use when: user asks a question
-  about course content, requests exam practice, study guide, concept explanation,
-  or comparison. Generates a cited Markdown practice file grounded in vault content.
+  Answer questions from the course knowledge base. Use when the user:
+  - Asks about any course concept: "什么是X" / "X和Y有什么区别" / "解释一下Z"
+  - Requests exam practice: "帮我练习" / "模拟一道关于X的题" / "考试可能怎么考"
+  - Wants a study guide: "帮我复习第三章" / "总结一下供应链的核心概念"
+  - Asks comparison: "compare A and B" / "A和B的关系是什么"
+  - Any question that can be answered from vault content
+  - Says "查一下" / "问一下" / "我想知道" followed by course topic
+  
+  This is the daily-use entry point after the knowledge base is built.
+  Generates cited Markdown practice files grounded ONLY in vault evidence.
 allowed-tools:
   - Read
   - Write

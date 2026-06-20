@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "course-kb",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Course knowledge base toolkit for Obsidian vaults",
   "owner": {
     "name": "Ysoseri1224"
@@ -9,7 +9,7 @@
   "plugins": [
     {
       "name": "course-kb",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "source": "./",
       "description": "Extract course materials, build structured vaults, generate grounded exam practice.",
       "author": {

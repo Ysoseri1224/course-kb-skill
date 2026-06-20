@@ -11,17 +11,17 @@ A Claude Code plugin that turns course materials into a structured Markdown know
 
 ## Commands
 
-| Command | Purpose |
-|---------|---------|
-| `/setup` | Initialize configuration, check tools, create vault skeleton |
-| `/ingest <file>` | Extract and integrate one source file |
-| `/ingest-batch <dir>` | Extract all files in a directory |
-| `/ingest-exam <file>` | Extract exam questions into test database |
-| `/q <question>` | Answer a question from the knowledge base |
-| `/lint` | Check vault health (broken links, orphans, etc.) |
-| `/status` | Show coverage summary |
-| `/compare-extractions <file>` | Compare extraction tool outputs |
-| `/rebuild-index` | Regenerate index.md from vault state |
+| Command | Purpose | Trigger |
+|---------|---------|---------|
+| `/build` | **Primary entry** — full guided setup + batch ingest | "帮我建知识库" / provide a folder |
+| `/q <question>` | **Daily use** — answer from knowledge base | Ask any course question |
+| `/ingest <file>` | Add one new file to existing vault | "帮我加入这个新讲义" |
+| `/ingest-batch <dir>` | Add a batch of new files | "这些新材料都加进去" |
+| `/ingest-exam <file>` | Extract exam questions | "这是往年考题" |
+| `/lint` | Check vault health | "检查一下知识库" |
+| `/status` | Coverage summary | "知识库现在什么情况" |
+| `/compare-extractions <file>` | Diagnostic: compare tools | "提取质量怎么样" |
+| `/rebuild-index` | Fix stale index | "重建索引" |
 
 ## Vault Structure
 
@@ -43,7 +43,7 @@ knowledge/
 /plugin install course-kb
 ```
 
-Then run `/setup` to initialize your vault.
+Then say "帮我建知识库" or run `/build` to start the guided setup.
 
 ## Requirements
 

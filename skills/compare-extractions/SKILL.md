@@ -1,10 +1,12 @@
 ---
 name: compare-extractions
-version: 1.0.0
+version: 1.0.1
 description: |
-  Run extraction tools on a file and compare outputs without writing knowledge pages.
-  Use when: testing extraction quality, diagnosing issues, or deciding if a file
-  needs manual review.
+  Compare extraction tool outputs on a file. Diagnostic tool — use when:
+  - "这个PDF提取得对不对" / "比较一下提取结果" / "提取质量怎么样"
+  - "compare extractions" / "check extraction quality"
+  - Troubleshooting extraction issues on a specific file
+  Does NOT write knowledge pages — diagnostic only.
 allowed-tools:
   - Read
   - Write

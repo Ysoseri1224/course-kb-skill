@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
   "name": "course-kb",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Course knowledge base toolkit — extract course materials, build structured Obsidian vaults, and answer questions grounded only in vault content.",
   "author": {
     "name": "Ysoseri1224",
