@@ -1,6 +1,5 @@
 ---
 name: ingest-batch
-version: 1.0.1
 description: |
   Ingest all supported files in a directory. Internal skill called by /build.
   Use standalone when: user has a new batch of files to add to an existing vault.
@@ -64,10 +63,4 @@ If any files failed, list them with error reason.
 
 ## Pause Conditions
 
-Same as /ingest — pause only on:
-- Resource already exists (per file)
-- Extraction materially disagrees
-- Source corruption
-- Concept conflict that changes meaning
-
-Do NOT pause between files for routine progress.
+See `references/pause-conditions.md`. Do NOT pause between files for routine progress.

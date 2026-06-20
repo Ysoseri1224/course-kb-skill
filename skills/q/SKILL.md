@@ -1,6 +1,5 @@
 ---
 name: q
-version: 1.0.1
 description: |
   Answer questions from the course knowledge base. Use when the user:
   - Asks about any course concept: "什么是X" / "X和Y有什么区别" / "解释一下Z"

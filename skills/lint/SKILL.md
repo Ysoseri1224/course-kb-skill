@@ -1,6 +1,5 @@
 ---
 name: lint
-version: 1.0.1
 description: |
   Check vault health. Use when:
   - "检查一下知识库" / "有没有问题" / "看看有什么坏链接"

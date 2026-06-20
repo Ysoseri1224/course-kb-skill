@@ -1,6 +1,5 @@
 ---
 name: rebuild-index
-version: 1.0.1
 description: |
   Rebuild index.md from current vault state. Maintenance tool — use when:
   - "重建索引" / "索引不对了" / "index 过期了"

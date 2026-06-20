@@ -1,6 +1,5 @@
 ---
 name: status
-version: 1.0.1
 description: |
   Show knowledge base coverage summary. Use when:
   - "知识库现在什么情况" / "覆盖了多少" / "建到哪了"

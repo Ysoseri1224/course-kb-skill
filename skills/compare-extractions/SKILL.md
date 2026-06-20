@@ -1,6 +1,5 @@
 ---
 name: compare-extractions
-version: 1.0.1
 description: |
   Compare extraction tool outputs on a file. Diagnostic tool — use when:
   - "这个PDF提取得对不对" / "比较一下提取结果" / "提取质量怎么样"

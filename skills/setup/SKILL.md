@@ -1,6 +1,5 @@
 ---
 name: setup
-version: 1.0.1
 description: |
   Initialize course-kb configuration. Internal skill called by /build.
   Rarely used standalone — prefer /build for the full guided experience.

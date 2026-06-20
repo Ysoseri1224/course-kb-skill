@@ -1,6 +1,5 @@
 ---
 name: ingest
-version: 1.0.1
 description: |
   Ingest one course source file into the existing knowledge base. Use when:
   - "帮我加入这个新讲义" / "新来了一个PDF" / "把这个也加进知识库"
@@ -58,11 +57,14 @@ Run all configured extraction tools for the file type:
 **PPTX routing:**
 - kb-extract: `kb extract <file> -o .extraction-cache/<slug>/kb-extract.md`
 - python-pptx fallback (preserves speaker notes):
-  `.venv/Scripts/python -c "from pptx import Presentation; ..."`
+  - Windows: `.venv\Scripts\python -c "from pptx import Presentation; ..."`
+  - macOS/Linux: `.venv/bin/python -c "from pptx import Presentation; ..."`
 
 **DOCX routing:**
 - kb-extract: `kb extract <file> -o .extraction-cache/<slug>/kb-extract.md`
-- markitdown fallback: `.venv/Scripts/python -m markitdown <file>`
+- markitdown fallback:
+  - Windows: `.venv\Scripts\python -m markitdown <file>`
+  - macOS/Linux: `.venv/bin/python -m markitdown <file>`
 
 Store candidates in `.extraction-cache/<slug>/` for comparison.
 
@@ -78,12 +80,7 @@ Compare candidates for:
 
 **Auto-resolve:** If differences are minor, merge best parts automatically.
 
-**Pause and ask user ONLY when:**
-- One extraction is clearly incomplete (>20% content missing)
-- Tables with likely exam-relevant content are corrupted
-- OCR ambiguity changes meaning
-- Source file appears damaged
-- Candidates disagree so much that canonical creation would be unsafe
+**Pause rules:** See `references/pause-conditions.md`.
 
 ## Step 4 — Create canonical resource
 
@@ -182,13 +179,4 @@ it catches only regressions introduced by this ingest.
 
 ## Pause Conditions
 
-Only pause for user input when:
-- Canonical resource already exists (ask before overwrite)
-- Extraction candidates materially disagree
-- Source appears corrupted
-- A concept conflict changes course meaning
-
-Do NOT pause for:
-- Routine index updates
-- Creating new concept/chapter pages
-- Normal gap reporting
+See `references/pause-conditions.md` for the full shared ruleset.

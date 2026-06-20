@@ -1,6 +1,5 @@
 ---
 name: build
-version: 1.0.1
 description: |
   Build a complete course knowledge base from source materials. This is the PRIMARY
   entry point for the skill. Use when the user says anything like:
@@ -92,12 +91,7 @@ Progress reporting: brief status per file (one line), not verbose logs.
 ...
 ```
 
-**Pause ONLY when:**
-- Extraction candidates materially disagree on a file
-- Source file appears corrupted
-- A concept conflict changes course meaning
-
-**Do NOT pause for:** routine operations, new file creation, index updates.
+See `references/pause-conditions.md` for when to pause vs. proceed automatically.
 
 ## Phase 4 — Exam Ingest (if exam path provided)
 

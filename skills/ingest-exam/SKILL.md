@@ -1,6 +1,5 @@
 ---
 name: ingest-exam
-version: 1.0.1
 description: |
   Ingest exam/test papers into the question database. Use when:
   - "这是往年考题" / "帮我整理这份试卷" / "把考试题加进去"
