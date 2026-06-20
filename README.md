@@ -1,6 +1,8 @@
 # course-kb-skill
 
-A Claude Code plugin that turns course materials into a structured Markdown knowledge base and answers questions grounded only in vault content.
+A skill plugin that turns course materials into a structured Markdown knowledge base and answers questions grounded only in vault content.
+
+Works with **Claude Code** and **OpenAI Codex CLI**.
 
 ## What it does
 
@@ -11,17 +13,17 @@ A Claude Code plugin that turns course materials into a structured Markdown know
 
 ## Commands
 
-| Command | Purpose | Trigger |
-|---------|---------|---------|
-| `/build` | **Primary entry** — full guided setup + batch ingest | "帮我建知识库" / provide a folder |
-| `/q <question>` | **Daily use** — answer from knowledge base | Ask any course question |
-| `/ingest <file>` | Add one new file to existing vault | "帮我加入这个新讲义" |
-| `/ingest-batch <dir>` | Add a batch of new files | "这些新材料都加进去" |
-| `/ingest-exam <file>` | Extract exam questions | "这是往年考题" |
-| `/lint` | Check vault health | "检查一下知识库" |
-| `/status` | Coverage summary | "知识库现在什么情况" |
-| `/compare-extractions <file>` | Diagnostic: compare tools | "提取质量怎么样" |
-| `/rebuild-index` | Fix stale index | "重建索引" |
+| Command | Purpose | Natural Language Trigger |
+|---------|---------|------------------------|
+| `build` | **Primary entry** — full guided setup + batch ingest | "帮我建知识库" / provide a folder |
+| `q <question>` | **Daily use** — answer from knowledge base | Ask any course question |
+| `ingest <file>` | Add one new file to existing vault | "帮我加入这个新讲义" |
+| `ingest-batch <dir>` | Add a batch of new files | "这些新材料都加进去" |
+| `ingest-exam <file>` | Extract exam questions | "这是往年考题" |
+| `lint` | Check vault health | "检查一下知识库" |
+| `status` | Coverage summary | "知识库现在什么情况" |
+| `compare-extractions <file>` | Diagnostic: compare tools | "提取质量怎么样" |
+| `rebuild-index` | Fix stale index | "重建索引" |
 
 ## Vault Structure
 
@@ -36,20 +38,64 @@ knowledge/
 └── practice/         — Generated answers and study guides (append-only)
 ```
 
+---
+
 ## Installation
+
+### Claude Code
 
 ```
 /plugin marketplace add https://github.com/Ysoseri1224/course-kb-skill
 /plugin install course-kb
 ```
 
-Then say "帮我建知识库" or run `/build` to start the guided setup.
+Then say "帮我建知识库" or run `/build` to start.
+
+### OpenAI Codex CLI
+
+**Option A — Install via Codex:**
+```
+Tell Codex: "Install the skill from github.com/Ysoseri1224/course-kb-skill"
+```
+
+**Option B — Manual install:**
+```bash
+# Clone into Codex skills directory
+git clone https://github.com/Ysoseri1224/course-kb-skill.git ~/.codex/skills/course-kb
+
+# Or copy just the skills you need
+cp -r skills/* ~/.codex/skills/
+```
+
+Then restart Codex and say "帮我建知识库" or `/use build` to start.
+
+**Option C — Project-level only:**
+```bash
+# Copy AGENTS.md to your project root for project-scoped instructions
+cp AGENTS.md /path/to/your/project/AGENTS.md
+```
+
+---
+
+## Command Syntax Comparison
+
+| Action | Claude Code | Codex CLI |
+|--------|-------------|-----------|
+| Build knowledge base | `/build` | `/use build` |
+| Ask a question | `/q What is X?` | `/use q What is X?` |
+| Add new file | `/ingest file.pdf` | `/use ingest file.pdf` |
+| Check health | `/lint` | `/use lint` |
+| Or just say... | "帮我建知识库" | "帮我建知识库" |
+
+Both tools support natural language triggering — the description field in each SKILL.md tells the AI when to activate the skill automatically.
+
+---
 
 ## Requirements
 
-- Claude Code
 - Python 3.11+ (3.13 recommended)
 - `uv` (Python package manager)
+- **Claude Code** or **OpenAI Codex CLI**
 
 ### Recommended extraction tools
 
