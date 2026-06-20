@@ -1,0 +1,14 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "course-kb",
+  "version": "1.0.0",
+  "description": "Course knowledge base toolkit — extract course materials, build structured Obsidian vaults, and answer questions grounded only in vault content.",
+  "author": {
+    "name": "Ysoseri1224",
+    "url": "https://github.com/Ysoseri1224"
+  },
+  "homepage": "https://github.com/Ysoseri1224/course-kb-skill",
+  "repository": "https://github.com/Ysoseri1224/course-kb-skill",
+  "license": "MIT",
+  "keywords": ["obsidian", "knowledge-base", "exam", "study", "course", "extraction", "vault"]
+}
